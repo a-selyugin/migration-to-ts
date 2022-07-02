@@ -18,6 +18,6 @@ type Article = {
 }
 
 type SourceObj = {
-  id: number | null,
+  id: string,
   name: string,
 }
