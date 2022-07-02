@@ -1,5 +1,4 @@
-import '../../types/RespNews';
-import '../../types/RespSources';
+import '../../types/ResponseTypes';
 import { Options } from '../../types/Interfaces';
 
 class Loader {

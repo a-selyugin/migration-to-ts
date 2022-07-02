@@ -1,5 +1,5 @@
 import './sources.css';
-import '../../../types/RespSources';
+import '../../../types/ResponseTypes';
 
 class Sources {
     public draw(data: Array<Source>): void {
