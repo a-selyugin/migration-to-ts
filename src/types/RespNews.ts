@@ -1,13 +1,11 @@
-
-
-type RespObj = {
+type RespNews = {
   status: string,
   totalResults: number,
   articles: Array<Article>,
 };
 
 type Article = {
-  source: SourceObj,
+  source: ArticleSource,
   author: string,
   title: string,
   description: string,
@@ -17,7 +15,7 @@ type Article = {
   content: string
 }
 
-type SourceObj = {
+type ArticleSource = {
   id: string,
   name: string,
 }
