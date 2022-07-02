@@ -3,8 +3,8 @@ import '../../types/RespSources';
 import { Options } from '../../types/Interfaces';
 
 class Loader {
-    public baseLink: string;
-    public options: Options;
+    readonly baseLink: string;
+    readonly options: Options;
 
     constructor(baseLink: string, options: Options) {
         this.baseLink = baseLink;

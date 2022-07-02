@@ -4,8 +4,8 @@ import '../../types/RespNews';
 import '../../types/RespSources';
 
 export class AppView {
-    public news: News;
-    public sources: Sources;
+    readonly news: News;
+    readonly sources: Sources;
 
     constructor() {
         this.news = new News();
