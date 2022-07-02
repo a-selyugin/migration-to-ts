@@ -4,15 +4,15 @@ import { Options } from '../../types/Interfaces';
 
 class Loader {
     readonly baseLink: string;
-    readonly options: Options;
+    readonly options: Pick<Options, 'apiKey'>;
 
-    constructor(baseLink: string, options: Options) {
+    constructor(baseLink: string, options: Pick<Options, 'apiKey'>) {
         this.baseLink = baseLink;
         this.options = options;
     }
 
     public getResp<T>(
-        { endpoint, options = {} }: { endpoint: string, options?: Options},
+        { endpoint, options = {} }: { endpoint: string, options?: Partial<Options>},
         callback: (data: T) => void = () => {
             console.error('No callback for GET response');
         }
@@ -30,7 +30,7 @@ class Loader {
         return res;
     }
 
-    private makeUrl(options: Options, endpoint: string): string {
+    private makeUrl(options: Partial<Options>, endpoint: string): string {
         const urlOptions: { [index: string]: string } = { ...this.options, ...options };
         let url = `${this.baseLink}${endpoint}?`;
 
@@ -41,7 +41,7 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    private load<T>(method: string, endpoint: string, callback: (data: T) => void, options: Options = {}): void {
+    private load<T>(method: string, endpoint: string, callback: (data: T) => void, options: Partial<Options> = {}): void {
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res) => res.json())
