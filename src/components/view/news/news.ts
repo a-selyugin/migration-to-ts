@@ -1,5 +1,5 @@
 import './news.css';
-import '../../../types/RespObj';
+import '../../../types/RespNews';
 
 class News {
     draw(data: Array<Article>): void {
