@@ -1,4 +1,4 @@
 export interface Options {
-  ApiKey?: string,
-  sources?: string,
+  apiKey?: string,
+  source?: string,
 }
