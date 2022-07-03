@@ -11,6 +11,9 @@
             <h1>News Portal</h1>
         </header>
         <main>
+            <h3 class="buttons-header">Categories</h3>
+            <div class="categories buttons"></div>
+            <h3 class="buttons-header">Sources</h3>
             <div class="sources buttons"></div>
             <div class="news"></div>
         </main>
@@ -25,6 +28,12 @@
                <a href="https://rs.school/js/"><img class="rsschool-logo" src="https://rs.school/images/rs_school_js.svg" alt="RS School logo"> </a>
             </div>
         </footer>
+
+        <template id="categoryItemTemp">
+            <div class="category__item">
+                <span class="category__item-name"></span>
+            </div>
+        </template>
 
         <template id="sourceItemTemp">
             <div class="source__item">

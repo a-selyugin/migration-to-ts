@@ -15,6 +15,7 @@ class App {
             .querySelector('.sources') as Element)
             .addEventListener('click', (e: Event) => this.controller.getNews(e, (data: RespNews) => this.view.drawNews(data)));
         this.controller.getSources((data: RespSources) => this.view.drawSources(data));
+        this.view.drawCategories();
     }
 }
 
