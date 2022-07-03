@@ -11,11 +11,15 @@ class App {
     }
 
     public start(): void {
+        this.view.drawCategories();
+        (document
+            .addEventListener('DOMContentLoaded', (e: Event) => this.controller.getSources(e, (data: RespSources) => this.view.drawSources(data))));
         (document
             .querySelector('.sources') as Element)
             .addEventListener('click', (e: Event) => this.controller.getNews(e, (data: RespNews) => this.view.drawNews(data)));
-        this.controller.getSources((data: RespSources) => this.view.drawSources(data));
-        this.view.drawCategories();
+        (document
+            .querySelector('.categories') as Element)
+            .addEventListener('click', (e: Event) => this.controller.getSources(e, (data: RespSources) => this.view.drawSources(data)));
     }
 }
 
