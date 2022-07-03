@@ -4,7 +4,9 @@ import '../../../types/ResponseTypes';
 class Categories {
     public draw(data: Array<string>): void {
         const fragment: DocumentFragment = document.createDocumentFragment();
-        const categoryItemTemp: HTMLTemplateElement = document.querySelector('#categoryItemTemp') as HTMLTemplateElement;
+        const categoryItemTemp: HTMLTemplateElement = document.querySelector(
+            '#categoryItemTemp'
+        ) as HTMLTemplateElement;
 
         data.forEach((item: string) => {
             const categoryClone: HTMLTemplateElement = categoryItemTemp.content.cloneNode(true) as HTMLTemplateElement;

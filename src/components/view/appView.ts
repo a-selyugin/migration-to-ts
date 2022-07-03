@@ -25,7 +25,16 @@ export class AppView {
     }
 
     public drawCategories(): void {
-        const values: Array<string> = ['All', 'Business', 'Entertainment', 'General', 'Health', 'Science', 'Sports', 'Technology'];
+        const values: Array<string> = [
+            'All',
+            'Business',
+            'Entertainment',
+            'General',
+            'Health',
+            'Science',
+            'Sports',
+            'Technology',
+        ];
         this.categories.draw(values);
     }
 }

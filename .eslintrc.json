@@ -5,8 +5,7 @@
         "plugin:prettier/recommended",
         "prettier",
         "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+        "plugin:@typescript-eslint/eslint-recommended"
     ],
     "parserOptions": {
         "ecmaVersion": 2020,
@@ -20,6 +19,7 @@
     "rules": {
         "no-debugger": "off",
         "no-console": 0,
+        "no-unused-vars": "off",
         "class-methods-use-this": "off",
         "@typescript-eslint/no-explicit-any": 2
     }

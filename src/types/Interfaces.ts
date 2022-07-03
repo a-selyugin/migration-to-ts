@@ -1,5 +1,5 @@
 export interface Options {
-  apiKey: string,
-  sources: string,
-  category: string,
+    apiKey: string;
+    sources: string;
+    category: string;
 }

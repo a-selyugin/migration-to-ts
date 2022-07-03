@@ -17,11 +17,12 @@ class AppController extends AppLoader {
                 callback
             );
             activeButton?.classList.remove('active');
-            const newActiveButton: Element = document.querySelector(`div[data-category-id=${activeCategory}]`) as Element;
+            const newActiveButton: Element = document.querySelector(
+                `div[data-category-id=${activeCategory}]`
+            ) as Element;
             newActiveButton.classList.add('active');
             return;
-        } 
-        else {
+        } else {
             while (target !== newsContainer) {
                 if (target.classList.contains('category__item')) {
                     const categoryId: string = target.getAttribute('data-category-id') as string;
@@ -39,7 +40,9 @@ class AppController extends AppLoader {
                         );
                     }
                     activeButton?.classList.remove('active');
-                    const newActiveButton: Element = document.querySelector(`div[data-category-id=${activeCategory}]`) as Element;
+                    const newActiveButton: Element = document.querySelector(
+                        `div[data-category-id=${activeCategory}]`
+                    ) as Element;
                     newActiveButton.classList.add('active');
                     return;
                 }
