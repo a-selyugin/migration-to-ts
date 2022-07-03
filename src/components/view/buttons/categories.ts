@@ -1,4 +1,4 @@
-import './categories.css';
+import './buttons.css';
 import '../../../types/ResponseTypes';
 
 class Categories {

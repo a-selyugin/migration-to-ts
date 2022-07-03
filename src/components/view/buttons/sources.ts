@@ -1,4 +1,4 @@
-import './sources.css';
+import './buttons.css';
 import '../../../types/ResponseTypes';
 
 class Sources {

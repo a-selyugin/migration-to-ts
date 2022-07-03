@@ -1,7 +1,7 @@
 import News from './news/news';
-import Sources from './sources/sources';
+import Sources from './buttons/sources';
 import '../../types/ResponseTypes';
-import Categories from './categories/categories';
+import Categories from './buttons/categories';
 
 export class AppView {
     readonly news: News;
