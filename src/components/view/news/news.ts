@@ -4,7 +4,7 @@ import '../../../types/ResponseTypes';
 class News {
     public draw(data: Array<Article>): void {
         const news: Array<Article> = data.length >= 10 ? data.filter((_item: Article, idx: number) => idx < 10) : data;
-
+        const urlToPlaceholder: string = 'https://via.placeholder.com/600x400.png?text=No+image';
         const fragment: DocumentFragment = document.createDocumentFragment();
         const newsItemTemp: HTMLTemplateElement = document.querySelector('#newsItemTemp') as HTMLTemplateElement;
 
@@ -14,7 +14,7 @@ class News {
             if (idx % 2) (newsClone.querySelector('.news__item') as HTMLDivElement).classList.add('alt');
 
             (newsClone.querySelector('.news__meta-photo') as HTMLDivElement).style.backgroundImage = `url(${
-                item.urlToImage || 'img/news_placeholder.jpg'
+                item.urlToImage || urlToPlaceholder
             })`;
             (newsClone.querySelector('.news__meta-author') as HTMLDivElement).textContent =
                 item.author || item.source.name;
