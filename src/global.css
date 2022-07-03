@@ -60,4 +60,12 @@ footer .rsschool-logo{
         font-weight: 600;
         margin: 0.5em;
     }
+
+    footer {
+        height: auto;
+        display: block;
+    }
+    footer .rsschool-logo{
+        margin: 0 auto;
+    }
 }
