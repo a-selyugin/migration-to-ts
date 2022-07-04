@@ -1,6 +1,6 @@
 import News from './news/news';
 import Sources from './buttons/sources';
-import '../../types/ResponseTypes';
+import { RespNews, Article, RespSources, Source } from '../../types/ResponseTypes';
 import Categories from './buttons/categories';
 
 export class AppView {

@@ -1,10 +1,10 @@
-type RespNews = {
+export type RespNews = {
     status: Status;
     totalResults: number;
     articles: Array<Article>;
 };
 
-type Article = {
+export type Article = {
     source: ArticleSource;
     author: string;
     title: string;
@@ -20,12 +20,12 @@ type ArticleSource = {
     name: string;
 };
 
-type RespSources = {
+export type RespSources = {
     status: Status;
     sources: Array<Source>;
 };
 
-type Source = {
+export type Source = {
     id: string;
     name: string;
     description: string;

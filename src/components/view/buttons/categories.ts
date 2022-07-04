@@ -1,5 +1,4 @@
 import './buttons.css';
-import '../../../types/ResponseTypes';
 
 class Categories {
     public draw(data: Array<string>): void {
