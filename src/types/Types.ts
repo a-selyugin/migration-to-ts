@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+export type Callback<T> = (data: T) => void;
+
 export type RespNews = {
     status: Status;
     totalResults: number;
@@ -36,6 +39,6 @@ export type Source = {
 };
 
 enum Status {
-    ok,
-    error,
+    ok = 'ok',
+    error = 'error',
 }

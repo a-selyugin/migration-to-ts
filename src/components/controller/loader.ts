@@ -1,4 +1,4 @@
-import '../../types/ResponseTypes';
+import { Callback } from '../../types/Types';
 import { Options } from '../../types/Interfaces';
 
 class Loader {
@@ -12,7 +12,7 @@ class Loader {
 
     public getResp<T>(
         { endpoint, options = {} }: { endpoint: string; options?: Partial<Options> },
-        callback: (data: T) => void = () => {
+        callback: Callback<T> = () => {
             console.error('No callback for GET response');
         }
     ): void {
@@ -41,12 +41,7 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    private load<T>(
-        method: string,
-        endpoint: string,
-        callback: (data: T) => void,
-        options: Partial<Options> = {}
-    ): void {
+    private load<T>(method: string, endpoint: string, callback: Callback<T>, options: Partial<Options> = {}): void {
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res: Response): Promise<T> => res.json())

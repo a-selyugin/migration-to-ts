@@ -1,5 +1,5 @@
 import './news.css';
-import { Article } from '../../../types/ResponseTypes';
+import { Article } from '../../../types/Types';
 
 class News {
     public draw(data: Array<Article>): void {

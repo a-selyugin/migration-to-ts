@@ -1,7 +1,8 @@
 import AppLoader from './appLoader';
+import { Callback } from '../../types/Types';
 
 class AppController extends AppLoader {
-    public getSources<T>(e: Event, callback: (data: T) => void): void {
+    public getSources<T>(e: Event, callback: Callback<T>): void {
         let target: Element = e.target as Element;
         const newsContainer: Element = e.currentTarget as Element;
 
@@ -16,10 +17,12 @@ class AppController extends AppLoader {
                 },
                 callback
             );
+
             activeButton?.classList.remove('active');
             const newActiveButton: Element = document.querySelector(
                 `div[data-category-id=${activeCategory}]`
             ) as Element;
+
             newActiveButton.classList.add('active');
             return;
         } else {
@@ -51,7 +54,7 @@ class AppController extends AppLoader {
         }
     }
 
-    public getNews<T>(e: Event, callback: (data: T) => void): void {
+    public getNews<T>(e: Event, callback: Callback<T>): void {
         let target: Element = e.target as Element;
         const newsContainer: Element = e.currentTarget as Element;
         const sourcesContainer: Element = document.querySelector('.sources') as Element;

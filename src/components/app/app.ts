@@ -1,5 +1,6 @@
 import AppController from '../controller/controller';
 import { AppView } from '../view/appView';
+import { RespNews, RespSources } from '../../types/Types';
 
 class App {
     readonly controller: AppController;

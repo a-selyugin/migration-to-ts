@@ -1,5 +1,5 @@
 import './buttons.css';
-import { Source } from '../../../types/ResponseTypes';
+import { Source } from '../../../types/Types';
 
 class Sources {
     public draw(data: Array<Source>): void {
