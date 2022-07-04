@@ -1,7 +1,7 @@
 import { Callback } from '../../types/Types';
-import { Options } from '../../types/Interfaces';
+import { Options, RequestResponse } from '../../types/Interfaces';
 
-class Loader {
+class Loader implements RequestResponse {
     readonly baseLink: string;
     readonly options: Pick<Options, 'apiKey'>;
 

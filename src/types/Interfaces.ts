@@ -3,3 +3,9 @@ export interface Options {
     sources: string;
     category: string;
 }
+
+export interface RequestResponse {
+    baseLink: string;
+    options: Pick<Options, 'apiKey'>;
+    getResp: Function;
+}
