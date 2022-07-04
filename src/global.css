@@ -26,23 +26,28 @@ footer {
     align-items: center;
     justify-content: space-around;
 }
+
 footer .copyright,
 footer .github-link {
     font-size: 14px;
     color: #333;
     text-align: center;
 }
+
 footer .copyright a,
 footer .github-link a {
     color: #444;
 }
+
 footer .copyright a:hover,
 footer .github-link a:hover {
     color: #555;
 }
+
 footer .copyright:before {
     content: '©';
 }
+
 footer .github-link:before{
     content: '';
     background-image: url('./assets/icons/GitHub-Mark-Light-32px.png');
@@ -50,6 +55,7 @@ footer .github-link:before{
     display: inline-block;
     width: 10px; 
     height: 10px;
+    margin: 0 1px;
 }
 
 footer .rsschool-logo{
@@ -57,7 +63,12 @@ footer .rsschool-logo{
     height: 30px;
 }
 
-@media screen and (max-width: 500px) {
+.news-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+@media screen and (max-width: 700px) {
     header{
         display: flex;
         justify-content: center;
@@ -70,6 +81,10 @@ footer .rsschool-logo{
 
     .buttons-header {
         font-weight: 400;
+    }
+
+    .news-container {
+        display: block;
     }
 
     footer {
